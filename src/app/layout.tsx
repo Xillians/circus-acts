@@ -1,4 +1,5 @@
 import React from "react";
+import "./theme.scss";
 
 const metadata = {
   title: 'Circus show sheet maker',
