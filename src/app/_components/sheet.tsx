@@ -1,6 +1,7 @@
 import React from "react";
 import { StartStats } from "./sheet/start-stats";
 import { Box, Flex, Heading } from "@chakra-ui/react";
+import { CircusDetails } from "./circus-details";
 
 export const Sheet: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ export const Sheet: React.FC = () => {
         Circus Show Sheet
       </Heading>
       <Flex>
+        <CircusDetails circusName="Circus Name" settlementName="Settlement Name" date="Date" />
         <StartStats />
       </Flex>
     </Box>
