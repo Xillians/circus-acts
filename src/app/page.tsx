@@ -7,11 +7,7 @@ function Page() {
 
   return (
     <Layout>
-      <div>
-        <h1>Circus show sheet maker</h1>
-        <p>A website to prepare your own circus show</p>
         <Sheet />
-      </div>
     </Layout>
   );
 }
