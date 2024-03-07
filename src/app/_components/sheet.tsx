@@ -1,7 +1,8 @@
 import React from "react";
 import { StartStats } from "./sheet/start-stats";
 import { Box, Flex, Heading } from "@chakra-ui/react";
-import { CircusDetails } from "./circus-details";
+import { CircusDetails } from "./sheet/circus-details";
+import { Downtime } from "./sheet/downtime";
 
 export const Sheet: React.FC = () => {
   return (
@@ -22,7 +23,14 @@ export const Sheet: React.FC = () => {
         Circus Show Sheet
       </Heading>
       <Flex>
-        <CircusDetails circusName="Circus Name" settlementName="Settlement Name" date="Date" />
+        <Flex flexDir={"column"}>
+          <CircusDetails
+            circusName="Circus Name"
+            settlementName="Settlement Name"
+            date="Date"
+          />
+          <Downtime />
+        </Flex>
         <StartStats />
       </Flex>
     </Box>

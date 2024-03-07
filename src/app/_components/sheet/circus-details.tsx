@@ -1,5 +1,5 @@
-import { Divider, Flex, Grid, Input, Tag } from "@chakra-ui/react";
-import React, { useEffect, useRef, useState } from "react";
+import { Flex, Grid, Input, Tag } from "@chakra-ui/react";
+import React, { useRef } from "react";
 
 interface circusDetailsProps {
   circusName: string;
@@ -50,7 +50,7 @@ const LabelledInput: React.FC<LabelledInputProps> = ({
         w="100%"
         p={2}
     >
-      <Flex direction="row" alignItems="center" w={"100%"} gap={16}>
+      <Flex direction="row" alignItems="center" w={"100%"} gap={16} borderBottom={"1px solid black"}>
         <Tag variant="solid" colorScheme="teal">
           {label}
         </Tag>
@@ -62,7 +62,6 @@ const LabelledInput: React.FC<LabelledInputProps> = ({
             outline={"none"}
         />
       </Flex>
-      <Divider orientation="horizontal" h="1px" bg="black" />
     </Flex>
   );
 };

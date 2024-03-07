@@ -1,4 +1,4 @@
-import { Flex, Heading, Input, Tag, Divider } from "@chakra-ui/react";
+import { Flex, Heading, Input, Tag } from "@chakra-ui/react";
 import React from "react";
 
 export const StartStats: React.FC = () => {
@@ -68,8 +68,9 @@ const LabelledInput: React.FC<LabelledInputProps> = ({
         fontSize={"1em"}
         fontWeight="bold"
         outline={"none"}
+        w={"100%"}
+        borderBottom={"1px solid black"}
       />
-      <Divider orientation="horizontal" h="1px" bg="black" />
       <Tag color={"var(--secondary-color)"}>{label}</Tag>
     </Flex>
   );
