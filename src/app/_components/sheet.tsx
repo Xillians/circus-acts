@@ -3,11 +3,11 @@ import { StartStats } from "./sheet/start-stats";
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import { CircusDetails } from "./sheet/circus-details";
 import { Downtime } from "./sheet/downtime";
+import { Showtime } from "./sheet/showtime";
 
 export const Sheet: React.FC = () => {
   return (
     <Box
-      w="100%"
       h="100%"
       p={4}
       display="flex"
@@ -22,16 +22,19 @@ export const Sheet: React.FC = () => {
       >
         Circus Show Sheet
       </Heading>
-      <Flex>
-        <Flex flexDir={"column"}>
-          <CircusDetails
-            circusName="Circus Name"
-            settlementName="Settlement Name"
-            date="Date"
-          />
-          <Downtime />
+      <Flex flexDir={"column"}>
+        <Flex>
+          <Flex flexDir={"column"}>
+            <CircusDetails
+              circusName="Circus Name"
+              settlementName="Settlement Name"
+              date="Date"
+            />
+            <Downtime />
+          </Flex>
+          <StartStats />
         </Flex>
-        <StartStats />
+        <Showtime />
       </Flex>
     </Box>
   );

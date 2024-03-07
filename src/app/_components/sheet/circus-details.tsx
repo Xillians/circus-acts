@@ -15,7 +15,6 @@ export const CircusDetails: React.FC<circusDetailsProps> = (
       direction="column"
       justifyContent="center"
       alignItems="center"
-      w="100%"
       h="100%"
       p={4}
     >
@@ -44,22 +43,28 @@ const LabelledInput: React.FC<LabelledInputProps> = ({
 
   return (
     <Flex
-        direction="column"
-        justifyContent="center"
-        alignItems="center"
-        w="100%"
-        p={2}
+      direction="column"
+      justifyContent="center"
+      alignItems="center"
+      w="100%"
+      p={2}
     >
-      <Flex direction="row" alignItems="center" w={"100%"} gap={16} borderBottom={"1px solid black"}>
+      <Flex
+        direction="row"
+        alignItems="center"
+        w={"100%"}
+        gap={16}
+        borderBottom={"1px solid black"}
+      >
         <Tag variant="solid" colorScheme="teal">
           {label}
         </Tag>
-        <Input 
-            ref={inputRef} 
-            placeholder={placeholder} 
-            border={"none"} 
-            w={"auto"}
-            outline={"none"}
+        <Input
+          ref={inputRef}
+          placeholder={placeholder}
+          border={"none"}
+          w={"auto"}
+          outline={"none"}
         />
       </Flex>
     </Flex>

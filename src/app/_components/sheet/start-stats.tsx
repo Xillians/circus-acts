@@ -1,5 +1,6 @@
-import { Flex, Heading, Input, Tag } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 import React from "react";
+import { LabelledInput } from "../labelled-inputs";
 
 export const StartStats: React.FC = () => {
   const stats = [
@@ -36,42 +37,14 @@ export const StartStats: React.FC = () => {
         <LabelledInput
           key={index}
           label={stat.label}
-          placeholder={stat.placeholder}
+          color="var(--secondary-color)"
+          alignText="center"
+          fontWeight="bold"
+          fontSize="1.5rem"
+          gap={4}
+          width="10em"
         />
       ))}
-    </Flex>
-  );
-};
-
-interface LabelledInputProps {
-  label: string;
-  placeholder: string;
-}
-
-const LabelledInput: React.FC<LabelledInputProps> = ({
-  label,
-  placeholder,
-}) => {
-  return (
-    <Flex
-      direction="column"
-      justifyContent="center"
-      alignItems="center"
-      w="10em"
-      h="100%"
-      p={4}
-    >
-      <Input
-        aria-details={`input ${placeholder}`}
-        border={0}
-        textAlign={"center"}
-        fontSize={"1em"}
-        fontWeight="bold"
-        outline={"none"}
-        w={"100%"}
-        borderBottom={"1px solid black"}
-      />
-      <Tag color={"var(--secondary-color)"}>{label}</Tag>
     </Flex>
   );
 };

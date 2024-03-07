@@ -10,7 +10,7 @@ export const Downtime: React.FC = () => {
       w="100%"
       p={4}
     >
-      <Heading as="h2" size="md" style={{ color: "var(--secondary-color)" }}>
+      <Heading as="h2" size="md" margin={4} style={{ color: "var(--secondary-color)" }}>
         Downtime
       </Heading>
       <Advertisement />
@@ -96,7 +96,7 @@ const Activities: React.FC = () => {
       w="100%"
       p={4}
     >
-      <Heading as="h3" size="sm" style={{ color: "var(--secondary-color)" }}>
+      <Heading as="h3" size="sm" margin={2} style={{ color: "var(--secondary-color)" }}>
         Downtime Activities
       </Heading>
       {days.map((day, index) => (
