@@ -4,7 +4,7 @@ import { Box, Flex, Heading } from "@chakra-ui/react";
 
 export const Sheet: React.FC = () => {
   return (
-    <Box 
+    <Box
       w="100%"
       h="100%"
       p={4}
@@ -20,8 +20,7 @@ export const Sheet: React.FC = () => {
       >
         Circus Show Sheet
       </Heading>
-      <Flex
-      >
+      <Flex>
         <StartStats />
       </Flex>
     </Box>
